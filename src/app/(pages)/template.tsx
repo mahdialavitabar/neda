@@ -6,7 +6,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
   const path = usePathname()
   return (
     <>
-      {path === '/login' ? null : <Menu />}
+      {path === '/login' || path === '/login2' ? null : <Menu />}
       {children}
     </>
   )
