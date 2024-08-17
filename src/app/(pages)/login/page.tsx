@@ -1,11 +1,20 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import { Button, Divider, Form, Input, Segmented } from 'antd'
 import Link from 'next/link'
 export default function LoginPage() {
+  const [formValues, setFormValues] = useState({
+    username: '',
+    password: '',
+  })
+  const [isChecked, setchecked] = useState(false)
   const handleSubmit = (values: any) => {
-    console.log(values)
+    setFormValues(values) //set => formValues
+  }
+
+  function handlechange() {
+    setchecked(!isChecked)
   }
   return (
     <div className="flex h-screen w-full">
@@ -84,13 +93,15 @@ export default function LoginPage() {
                 <Input.Password />
               </Form.Item>
               <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-                <Button type="primary" htmlType="submit">
+                <Button type="primary" htmlType="submit" onClick={handleSubmit}>
                   Submit
                 </Button>
               </Form.Item>
             </Form>
           </div>
         </div>
+        <input type="checkbox" checked ={isChecked}onChange={handlechange} />
+        <p>{isChecked ? 'yes' : 'no'}</p>
         <div className="w-full h-32 flex justify-center gap-2">
           <span className="text-center ">هنوز عضو سایت ما نشده اید؟</span>
           <Link href="/signup">ثبت نام کنید</Link>

@@ -4,15 +4,6 @@ import Image from 'next/image'
 export default function page() {
   return (
     <div className="flex flex-row w-full h-full">
-      <div className="h-full w-[35%]">
-        <Image
-          className="h-full w-full"
-          src={require('/public/image/storage.webp')}
-          height={100}
-          width={500}
-          alt="logo4"
-        />
-      </div>
       <div className="flex flex-col w-[65%] h-full ">
         <div className="flex gap-10 items-center mr-20 mt-10">
           <Image
@@ -31,7 +22,16 @@ export default function page() {
             <Button>ورود</Button>
           </div>
         </div>
-        <div className='h-20'>هنپز پارد سایت ما نشده اید</div>
+        <div className="h-20">هنپز پارد سایت ما نشده اید</div>
+      </div>
+      <div className="h-full w-[35%]">
+        <Image
+          className="h-full w-full"
+          src={require('/public/image/storage.webp')}
+          height={100}
+          width={500}
+          alt="logo4"
+        />
       </div>
     </div>
   )
