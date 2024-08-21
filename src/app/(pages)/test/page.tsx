@@ -1,4 +1,5 @@
 'use client'
+import { Spin, Switch } from 'antd'
 import { log } from 'console'
 import { useState } from 'react'
 export default function page() {
@@ -18,12 +19,53 @@ export default function page() {
   function hand2() {
     setfirst('')
   }
+  const shart =
+    first === 'bye' ? <p>uhuihihihui</p> : <button>bhbjhbjhb</button>
+  const products = [
+    { title: 'Cabbage', id: 1 },
+    { title: 'Garlic', id: 2 },
+    { title: 'Apple', id: 3 },
+    { title: 'Cabbage', id: 1 },
+    { title: 'Garlic', id: 2 },
+    { title: 'Apple', id: 3 },
+    { title: 'Cabbage', id: 1 },
+    { title: 'Garlic', id: 2 },
+    { title: 'Apple', id: 3 },
+    { title: 'Cabbage', id: 1 },
+    { title: 'Garlic', id: 2 },
+    { title: 'Apple', id: 3 },
+    { title: 'Cabbage', id: 1 },
+    { title: 'Garlic', id: 2 },
+    { title: 'Apple', id: 3 },
+    { title: 'Cabbage', id: 1 },
+    { title: 'Garlic', id: 2 },
+    { title: 'Apple', id: 3 },
+    { title: 'Cabbage', id: 1 },
+    { title: 'Garlic', id: 2 },
+    { title: 'Apple', id: 3 },
+    { title: 'Cabbage', id: 1 },
+    { title: 'Garlic', id: 2 },
+    { title: 'Apple', id: 3 },
+    { title: 'Cabbage', id: 1 },
+    { title: 'Garlic', id: 2 },
+    { title: 'Apple', id: 3 },
+    { title: 'Cabbage', id: 1 },
+    { title: 'Garlic', id: 2 },
+    { title: 'Apple', id: 3 },
+    { title: 'Cabbage', id: 1 },
+    { title: 'Garlic', id: 2 },
+    { title: 'Apple', id: 3 },
+  ]
+
   return (
-    <div className="mt-10 flex justify-center">
-      <input type="checkbox" checked={ischecked} onChange={handlechange} />
+    <div className="mt-10 flex flex-col gap-10 items-center justify-center">
+      {/* <input type="checkbox" checked={ischecked} onChange={handlechange} />
       <input type="text" onChange={hand1} value={first} />
-      <p>{first}</p>
-      <button onClick={hand2}>clear</button>
+      <p>مقدار{shart}</p>
+      <button onClick={hand2}>clear</button> */}
+      {products.map((items: any, index: number) => {
+        return <li>{items.title}</li>
+      })}
     </div>
   )
 }
