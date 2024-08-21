@@ -22,39 +22,8 @@ export default function page() {
   const shart =
     first === 'bye' ? <p>uhuihihihui</p> : <button>bhbjhbjhb</button>
   const products = [
-    { title: 'Cabbage', id: 1 },
-    { title: 'Garlic', id: 2 },
-    { title: 'Apple', id: 3 },
-    { title: 'Cabbage', id: 1 },
-    { title: 'Garlic', id: 2 },
-    { title: 'Apple', id: 3 },
-    { title: 'Cabbage', id: 1 },
-    { title: 'Garlic', id: 2 },
-    { title: 'Apple', id: 3 },
-    { title: 'Cabbage', id: 1 },
-    { title: 'Garlic', id: 2 },
-    { title: 'Apple', id: 3 },
-    { title: 'Cabbage', id: 1 },
-    { title: 'Garlic', id: 2 },
-    { title: 'Apple', id: 3 },
-    { title: 'Cabbage', id: 1 },
-    { title: 'Garlic', id: 2 },
-    { title: 'Apple', id: 3 },
-    { title: 'Cabbage', id: 1 },
-    { title: 'Garlic', id: 2 },
-    { title: 'Apple', id: 3 },
-    { title: 'Cabbage', id: 1 },
-    { title: 'Garlic', id: 2 },
-    { title: 'Apple', id: 3 },
-    { title: 'Cabbage', id: 1 },
-    { title: 'Garlic', id: 2 },
-    { title: 'Apple', id: 3 },
-    { title: 'Cabbage', id: 1 },
-    { title: 'Garlic', id: 2 },
-    { title: 'Apple', id: 3 },
-    { title: 'Cabbage', id: 1 },
-    { title: 'Garlic', id: 2 },
-    { title: 'Apple', id: 3 },
+    { title: 'kookool', id: 1 },
+    { title: 'googool', id: 2 },
   ]
 
   return (
@@ -63,9 +32,18 @@ export default function page() {
       <input type="text" onChange={hand1} value={first} />
       <p>مقدار{shart}</p>
       <button onClick={hand2}>clear</button> */}
-      {products.map((items: any, index: number) => {
-        return <li>{items.title}</li>
+      {products.map(function (element) {
+        return <p>{element.title}</p>
       })}
+      <div>
+        {products.map(
+          function (item) {
+            return <li>{item.id}</li>
+            
+          }
+        )}
+      </div>
     </div>
+    
   )
 }
